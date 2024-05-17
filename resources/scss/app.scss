@@ -8,11 +8,45 @@ $fa-font-path: "../webfonts" !default;
 @import "~@fortawesome/fontawesome-free/scss/brands";
 
 @import '~bootstrap/scss/bootstrap';
+
+header {
+    color: $text-red;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 600;
+    transition: background-color 0.3s ease;
+    background: linear-gradient(to top, transparent 0%, $bg-black 100%);
+    &.scrolled {
+        background-color: $bg-black;
+        background: $bg-black;
+    }
+    .mr-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        .logo-container {
+            display: flex;
+            align-items: center;
+            ul {
+                li {
+                    padding: 0 20px;
+                    a {
+                        text-decoration: none;
+                        color: $text-gray;
+                    }
+                }
+            }
+        }
+    }
+}
 main {
     height: 100vh;
     background: linear-gradient(to top, $bg-dark 0%, rgba(0, 0, 0, 0) 100%);
+    padding: 50px;
     h1 {
         color: $text-color;
-        
+        text-align: center;
     }
 }
