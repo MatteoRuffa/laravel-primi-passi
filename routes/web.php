@@ -16,3 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('home');
 });
+Route::get('/prova', function () {					
+        return view('Prova', ['name' => 'Matteo', 'surname' => 'R***a']);	
+});
